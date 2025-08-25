@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Integer Math</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table border="1">
-  <thead>
-    <tr>
-      <th><input type="checkbox" id="selectAll">เลือกทั้งหมด</th>
-      <th>ชื่อ</th>
-      <th>อีเมล</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><input type="checkbox" name="selectUser" value="1"></td>
-      <td><input type="checkbox" name="selectUser" value="1">สมชาย</td>
-      <td>somchai@example.com</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox" name="selectUser" value="1"></td>
-      <td>สมหญิง &divide yes = baby</td>
-      <td><input type="text" class="number"></input> ถึง <input type="text" class="number"></input></td>
-    </tr>
-  </tbody>
-</table>
-<script>
-  document.getElementById("selectAll").onclick = function() {
-    let checkboxes = document.querySelectorAll('input[name="selectUser"]');
-    checkboxes.forEach(checkbox => checkbox.checked = this.checked);
-  }
-</script>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Exercise</th>
+          <th>Solution</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="addExercise()"></button>
+    <button onclick="showSolution()"></button>
+  </div>
+
+  <div class="setting">
+    <h1></h1>
+    <div class="number-setting">
+      <label><input type="number"></label>
+      <label><input type="number"></label>
+    </div>
+    <div class="operator-setting">
+      <label><input type="checkbox" class="operator" value="+">บวก</label>
+      <label><input type="checkbox" class="operator" value="-">ลบ</label>
+      <label><input type="checkbox" class="operator" value="*">คูณ</label>
+      <label><input type="checkbox" class="operator" value="/">หาร</label>
+    </div>
+    <button onclick="raondomExercise()">สุ่มโจทย์</button>
+  </div>
+
+<script src="script.js"></script>
 </body>
 </html>
